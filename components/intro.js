@@ -1,21 +1,25 @@
 import { CMS_NAME } from '../lib/constants'
+import HeroPost from '../components/hero-post'
 
 const age = () => {
   return new Date().getFullYear() - 1998
 }
 
 const skills = [
-  { name: "Vue.js", icon: '/assets/me/skills/vue.svg', w: 8 },
-  { name: "React.js", icon: '/assets/me/skills/react.svg', w: 8 },
-  { name: "Nuxt.js", icon: '/assets/me/skills/nuxt.svg', w: 8 },
-  { name: "Next.js", icon: '/assets/me/skills/next.svg', w: 16 },
-  { name: "Firebase", icon: '/assets/me/skills/firebase.svg', w: 20 },
-  { name: "Laravel", icon: '/assets/me/skills/laravel.svg', w: 10 },
-  { name: "Django", icon: '/assets/me/skills/django.svg', w: 16 },
+  { name: "Vue.js", icon: '/assets/me/skills/vue.svg', w: 12 },
+  { name: "React.js", icon: '/assets/me/skills/react.svg', w: 12 },
+  { name: "Nuxt.js", icon: '/assets/me/skills/nuxt.svg', w: 12 },
+  { name: "Next.js", icon: '/assets/me/skills/next.svg', w: 12 },
+  { name: "Firebase", icon: '/assets/me/skills/firebase.svg', w: 16 },
+  { name: "Laravel", icon: '/assets/me/skills/laravel.svg', w: 16 },
+  { name: "Django", icon: '/assets/me/skills/django.svg', w: 12 },
   { name: "Amazon Web Services", icon: '/assets/me/skills/aws.svg', w: 12 },
+  { name: "Strapi", icon: '/assets/me/skills/strapi.svg', w: 16 },
+  { name: "Dialogflow", icon: '/assets/me/skills/dialogflow.svg', w: 16 },
 ];
 
-export default function Intro() {
+export default function Intro({ posts }) {
+  const heroPost = posts[0]
   return (
     <section className="container flex-col md:flex-row flex items-start md:justify-between p-wrapper-m lg:p-wrapper-lg xl:p-wrapper-xl">
       <div className="sticky top-s1 mb-10 lg:mb-0 text-center w-full">
@@ -66,8 +70,8 @@ export default function Intro() {
       <ul className="skills max-w-skill">
         <li className="sticky top-s1">
           <div className="p-sk-1">
-            <div className="bg-white py-16 px-8 min-h-skill shadow-skill rounded-lg">
-              <div className="skillHeader mb-10">
+            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-skill shadow-skill rounded-lg">
+              <div className="skillHeader mb-4 lg:mb-10">
                 <div className="text-4xl">👋</div>
               </div>
               <h2 className="font-bold text-2xl mb-4">Acerca de mi</h2>
@@ -79,8 +83,8 @@ export default function Intro() {
         </li>
         <li className="sticky top-s1">
           <div className="p-sk-2">
-            <div className="bg-white py-16 px-8 min-h-skill shadow-skill rounded-lg">
-              <div className="skillHeader mb-10">
+            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-skill shadow-skill rounded-lg">
+              <div className="skillHeader mb-4 lg:mb-10">
                 <div className="text-4xl">🔥</div>
               </div>
               <h2 className="font-bold text-2xl mb-4">Skills</h2>
@@ -102,8 +106,32 @@ export default function Intro() {
         </li>
         <li className="sticky top-s1">
           <div className="p-sk-3">
-            <div className="bg-white py-16 px-8 min-h-skill shadow-skill rounded-lg soon relative">
-              <div className="skillHeader mb-10">
+            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-skill shadow-skill rounded-lg">
+              <div className="skillHeader mb-4 lg:mb-10">
+                <div className="text-4xl">✍</div>
+              </div>
+              <h2 className="font-bold text-2xl mb-4">Blog</h2>
+              <div className="text-lg text-gray-600">
+                <div className="mt-6 flex flex-wrap items-center justify-around">
+                  {heroPost && (
+                    <HeroPost
+                      title={heroPost.title}
+                      coverImage={heroPost.coverImage}
+                      date={heroPost.date}
+                      author={heroPost.author}
+                      slug={heroPost.slug}
+                      excerpt={heroPost.excerpt}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li className="sticky top-s1">
+          <div className="p-sk-4">
+            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-skill shadow-skill rounded-lg">
+              <div className="skillHeader mb-4 lg:mb-10">
                 <div className="text-4xl">⚡</div>
               </div>
               <h2 className="font-bold text-2xl mb-4">Contacto</h2>

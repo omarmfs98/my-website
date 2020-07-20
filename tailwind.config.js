@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       minHeight: {
-        skill: '480px'
+        skill: '400px'
       },
       maxWidth: {
         skill: '400px'
@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         wrapper: {
           dark: '#f1f1de',
-          start: '#fcfdeb',
+          start: '#fbffb6',
           end: 'rgba(255, 255, 255, 0)'
         }
       },
@@ -21,7 +21,7 @@ module.exports = {
       padding: {
         'wrapper-xl': '14.5rem 2.5rem 12rem 2.5rem',
         'wrapper-lg': '4.5rem 2.5rem 5rem 2.5rem',
-        'wrapper-m': '10rem 0 15rem 0',
+        'wrapper-m': '10rem 0 10rem 0',
         'sk-1': '0px 0px 80px 0px',
         'sk-2': '20px 0px 60px 0px',
         'sk-3': '40px 0px 40px 0px',
