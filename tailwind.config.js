@@ -2,15 +2,30 @@ module.exports = {
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
     extend: {
+      minHeight: {
+        skill: '480px'
+      },
+      maxWidth: {
+        skill: '400px'
+      },
       colors: {
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
-        success: '#0070f3',
-        cyan: '#79FFE1',
+        wrapper: {
+          dark: '#f1f1de',
+          start: '#fcfdeb',
+          end: 'rgba(255, 255, 255, 0)'
+        }
       },
       spacing: {
         28: '7rem',
+      },
+      padding: {
+        'wrapper-xl': '14.5rem 2.5rem 12rem 2.5rem',
+        'wrapper-lg': '4.5rem 2.5rem 5rem 2.5rem',
+        'wrapper-m': '10rem 0 15rem 0',
+        'sk-1': '0px 0px 80px 0px',
+        'sk-2': '20px 0px 60px 0px',
+        'sk-3': '40px 0px 40px 0px',
+        'sk-4': '60px 0px 20px 0px'
       },
       letterSpacing: {
         tighter: '-.04em',
@@ -27,7 +42,14 @@ module.exports = {
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',
         medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
+        skill: '0px 0px 10px rgba(0, 0, 0, 0.08)'
       },
+      gradients: theme => ({
+        'wrapper': ['190deg', theme('colors.wrapper.start'), '0%', theme('colors.wrapper.end'), '45%']
+      })
     },
   },
+  plugins: [
+    require('./plugins/gradients')
+  ],
 }
