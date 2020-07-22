@@ -34,7 +34,7 @@ export default function Meta() {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`Sitio web de Omar Florez`}
+        content={`Sitio web de Omar Flórez`}
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>

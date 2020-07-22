@@ -9,7 +9,7 @@ export default function Index({ allPosts }) {
     <>
       <Layout>
         <Head>
-          <title>Omar Florez - Frontend Developer</title>
+          <title>Omar Flórez - Frontend Developer</title>
         </Head>
         <Container>
           <Intro posts={allPosts} />

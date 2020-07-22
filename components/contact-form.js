@@ -17,7 +17,7 @@ let ContactForm = props => {
                 <div>
                     <h2 className="font-bold text-2xl mb-4">Contacto</h2>
                     <div className="text-lg text-gray-600">
-                        <p className="mb-3">Si deseas contactarme, por favor llena el formulario:</p>
+                        <p className="mb-3 text-sm lg:text-lg">Si deseas contactarme, por favor llena el formulario:</p>
                         <div className="flex flex-wrap -mx-3 mb-3">
                             <div className="w-full px-3">
                                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
