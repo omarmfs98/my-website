@@ -1,6 +1,12 @@
 module.exports = {
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1408px',
+    },
     extend: {
       minHeight: {
         skill: '400px',
@@ -21,7 +27,7 @@ module.exports = {
       },
       padding: {
         'wrapper-xl': '14.5rem 2.5rem 12rem 2.5rem',
-        'wrapper-lg': '4.5rem 2.5rem 5rem 2.5rem',
+        'wrapper-lg': '4.5rem 2.5rem 0rem 2.5rem',
         'wrapper-m': '10rem 0 10.6rem 0',
         'sk-1': '0px 0px 80px 0px',
         'sk-2': '20px 0px 60px 0px',
