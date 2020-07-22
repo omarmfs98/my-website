@@ -1,25 +1,52 @@
-import { CMS_NAME } from '../lib/constants'
+import { SKILLS, API_URL } from '../lib/constants'
 import HeroPost from '../components/hero-post'
+import ContactForm from '../components/contact-form'
+import { useDispatch } from 'react-redux'
 
 const age = () => {
   return new Date().getFullYear() - 1998
 }
 
-const skills = [
-  { name: "Vue.js", icon: '/assets/me/skills/vue.svg', w: 12 },
-  { name: "React.js", icon: '/assets/me/skills/react.svg', w: 12 },
-  { name: "Nuxt.js", icon: '/assets/me/skills/nuxt.svg', w: 12 },
-  { name: "Next.js", icon: '/assets/me/skills/next.svg', w: 12 },
-  { name: "Firebase", icon: '/assets/me/skills/firebase.svg', w: 16 },
-  { name: "Laravel", icon: '/assets/me/skills/laravel.svg', w: 16 },
-  { name: "Django", icon: '/assets/me/skills/django.svg', w: 12 },
-  { name: "Amazon Web Services", icon: '/assets/me/skills/aws.svg', w: 12 },
-  { name: "Strapi", icon: '/assets/me/skills/strapi.svg', w: 16 },
-  { name: "Dialogflow", icon: '/assets/me/skills/dialogflow.svg', w: 16 },
-];
+const useCounter = () => {
+  const dispatch = useDispatch()
+  const handleSended = () =>
+    dispatch({
+      type: 'HANDLE_SENDED',
+    })
+  const handleSending = () =>
+    dispatch({
+      type: 'HANDLE_SENDING',
+    })
+  return { handleSended, handleSending }
+}
 
 export default function Intro({ posts }) {
   const heroPost = posts[0]
+
+  const { handleSended, handleSending } = useCounter()
+
+  const submit = values => {
+
+    const data = {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(values)
+    };
+
+    handleSending()
+
+    fetch(`${API_URL}/contacts`, data)
+      .then(response => response.json())
+      .then(() => {
+        handleSended()
+      })
+      .then(() => {
+        handleSending()
+      })
+  }
   return (
     <section className="container flex-col md:flex-row flex items-start md:justify-between p-wrapper-m lg:p-wrapper-lg xl:p-wrapper-xl">
       <div className="sticky top-s1 mb-10 lg:mb-0 text-center w-full">
@@ -70,28 +97,28 @@ export default function Intro({ posts }) {
       <ul className="skills max-w-skill">
         <li className="sticky top-s1">
           <div className="p-sk-1">
-            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-skill shadow-skill rounded-lg">
+            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-movil lg:min-h-skill shadow-skill rounded-lg">
               <div className="skillHeader mb-4 lg:mb-10">
                 <div className="text-4xl">👋</div>
               </div>
               <h2 className="font-bold text-2xl mb-4">Acerca de mi</h2>
               <div className="text-lg text-gray-600">
-                <p>Hola, me llamo Omar, tengo {age()} años, soy Desarrollador Frontend 👨‍💻, actualmente estoy estudiando Ingeniería de Sistemas en la Universidad de Córdoba, nací en Bogotá, Colombia pero me crié en Planeta Rica, Córdoba.</p>
+                <p className="text-sm lg:text-lg">Hola, me llamo Omar, tengo {age()} años, soy Desarrollador Frontend 👨‍💻, actualmente estoy estudiando Ingeniería de Sistemas en la Universidad de Córdoba, nací en Bogotá, Colombia pero me crié en Planeta Rica, Córdoba.</p>
               </div>
             </div>
           </div>
         </li>
         <li className="sticky top-s1">
           <div className="p-sk-2">
-            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-skill shadow-skill rounded-lg">
+            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-movil lg:min-h-skill shadow-skill rounded-lg">
               <div className="skillHeader mb-4 lg:mb-10">
                 <div className="text-4xl">🔥</div>
               </div>
               <h2 className="font-bold text-2xl mb-4">Skills</h2>
               <div className="text-lg text-gray-600">
-                <p>He trabajado con diversas tecnologías para ambitos como Backend, Frontend, Cloud Computing, entre otros:</p>
+                <p className="text-sm lg:text-lg">He trabajado con diversas tecnologías para ambitos como Backend, Frontend, Cloud Computing, entre otros:</p>
                 <div className="mt-6 flex flex-wrap items-center justify-around">
-                  {skills.map((skill, i) =>
+                  {SKILLS.map((skill, i) =>
                     <div className={`w-${skill.w} h-8 mx-3 my-2 skill-icon bg-center bg-contain`} key={i}
                       style={{
                         backgroundImage: `url(${skill.icon})`
@@ -106,7 +133,7 @@ export default function Intro({ posts }) {
         </li>
         <li className="sticky top-s1">
           <div className="p-sk-3">
-            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-skill shadow-skill rounded-lg">
+            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-movil lg:min-h-skill shadow-skill rounded-lg">
               <div className="skillHeader mb-4 lg:mb-10">
                 <div className="text-4xl">✍</div>
               </div>
@@ -130,40 +157,11 @@ export default function Intro({ posts }) {
         </li>
         <li className="sticky top-s1">
           <div className="p-sk-4">
-            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-skill shadow-skill rounded-lg">
+            <div className="bg-white py-4 px-4 lg:py-16 lg:px-8 min-h-movil lg:min-h-skill shadow-skill rounded-lg">
               <div className="skillHeader mb-4 lg:mb-10">
                 <div className="text-4xl">⚡</div>
               </div>
-              <h2 className="font-bold text-2xl mb-4">Contacto</h2>
-              <div className="text-lg text-gray-600">
-                <p className="mb-3">Si deseas contactarme, por favor llena el formulario:</p>
-                <form className="w-full max-w-lg">
-                  <div className="flex flex-wrap -mx-3 mb-3">
-                    <div className="w-full px-3">
-                      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
-                        Nombre
-                      </label>
-                      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="Omar" />
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap -mx-3 mb-3">
-                    <div className="w-full px-3">
-                      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
-                        Correo
-                      </label>
-                      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" />
-                      <p className="text-gray-600 text-xs italic">Respondere lo mas pronto posible ⚡</p>
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap -mx-3">
-                    <div className="w-full px-3">
-                      <button className="w-full shadow bg-green-500 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-                        Enviar
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
+              <ContactForm onSubmit={submit} />
             </div>
           </div>
         </li>
