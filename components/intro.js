@@ -48,7 +48,7 @@ export default function Intro({ posts }) {
       })
   }
   return (
-    <section className="container flex-col md:flex-row flex items-start md:justify-between p-wrapper-m lg:p-wrapper-lg xl:p-wrapper-xl">
+    <section className="flex-col md:flex-row flex items-start md:justify-between p-wrapper-m lg:p-wrapper-lg xl:p-wrapper-xl">
       <div className="sticky top-s1 mb-10 lg:mb-0 text-center w-full">
         <h1 className="text-6xl md:text-7xl xl:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
           Omar Flórez
