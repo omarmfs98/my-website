@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = {
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
@@ -5,7 +7,7 @@ module.exports = {
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
-      'xl': '1408px',
+      'xl': '1408px'
     },
     extend: {
       minHeight: {
@@ -26,7 +28,7 @@ module.exports = {
         }
       },
       spacing: {
-        28: '7rem',
+        28: '7rem'
       },
       padding: {
         'wrapper-xl': '14.5rem 2.5rem 12rem 2.5rem',
@@ -38,31 +40,31 @@ module.exports = {
         'sk-4': '60px 0px 20px 0px'
       },
       letterSpacing: {
-        tighter: '-.04em',
+        tighter: '-.04em'
       },
       lineHeight: {
-        tight: 1.2,
+        tight: 1.2
       },
       fontSize: {
         '5xl': '2.5rem',
         '6xl': '2.75rem',
         '7xl': '4.5rem',
-        '8xl': '6.25rem',
+        '8xl': '6.25rem'
       },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',
         medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
         skill: '0px 0px 10px rgba(0, 0, 0, 0.08)'
       },
-      gradients: theme => ({
-        'wrapper': ['190deg', theme('colors.wrapper.start'), '0%', theme('colors.wrapper.end'), '45%']
-      })
-    },
+      gradients: function gradients(theme) {
+        return {
+          'wrapper': ['190deg', theme('colors.wrapper.start'), '0%', theme('colors.wrapper.end'), '45%']
+        };
+      }
+    }
   },
   variants: {
-    minHeight: ['responsive'],
+    minHeight: ['responsive']
   },
-  plugins: [
-    require('./plugins/gradients')
-  ],
-}
+  plugins: [require('./plugins/gradients')]
+};
