@@ -57,7 +57,7 @@ export default function Intro({ posts }) {
           Frontend Developer
         </div>
         <div className="flex items-center justify-center mt-4">
-          <a className="font-bold py-2 px-4 rounded inline-flex items-center mx-2" href="https://github.com/omarmfs98" target="_blank">
+          <a className="font-bold py-2 px-4 rounded inline-flex items-center mx-2" href="https://github.com/omarmfs98" target="_blank" title="Github">
             <svg className="w-5 h-5 lg:w-8 lg:h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 20" enableBackground="new 0 0 20 20">
               <path className="fill-current" d="M13.18,11.309c-0.718,0-1.3,0.807-1.3,1.799c0,0.994,0.582,1.801,1.3,1.801s1.3-0.807,1.3-1.801
     C14.479,12.116,13.898,11.309,13.18,11.309z M17.706,6.626c0.149-0.365,0.155-2.439-0.635-4.426c0,0-1.811,0.199-4.551,2.08
@@ -70,14 +70,14 @@ export default function Intro({ posts }) {
     c0,0.994,0.582,1.801,1.3,1.801c0.719,0,1.301-0.807,1.301-1.801C8.122,12.116,7.54,11.309,6.821,11.309z"/>
             </svg>
           </a>
-          <a className="font-bold py-2 px-4 rounded inline-flex items-center mx-2" href="https://www.linkedin.com/in/omar-florez-salgado/" target="_blank">
+          <a className="font-bold py-2 px-4 rounded inline-flex items-center mx-2" href="https://www.linkedin.com/in/omar-florez-salgado/" target="_blank" title="LinkedIn">
             <svg className="w-5 h-5 lg:w-8 lg:h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 20" enableBackground="new 0 0 20 20">
               <path className="fill-current" d="M1,6h4v13H1V6z M3,1C1.8,1,1,2,1,3.1C1,4.1,1.8,5,3,5c1.3,0,2-0.9,2-2C5,1.9,4.2,1,3,1z M14.6,6.2
     c-2.1,0-3.3,1.2-3.8,2h-0.1l-0.2-1.7H6.9C6.9,7.6,7,8.9,7,10.4V19h4v-7.1c0-0.4,0-0.7,0.1-1c0.3-0.7,0.8-1.6,1.9-1.6
     c1.4,0,2,1.2,2,2.8V19h4v-7.4C19,7.9,17.1,6.2,14.6,6.2z"/>
             </svg>
           </a>
-          <a className="font-bold py-2 px-4 rounded inline-flex items-center mx-2" href="mailto:hello@omarflorez.me" target="_blank">
+          <a className="font-bold py-2 px-4 rounded inline-flex items-center mx-2" href="mailto:hello@omarflorez.me" target="_blank" title="E-mail">
             <svg className="w-5 h-5 lg:w-8 lg:h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 20" enableBackground="new 0 0 20 20">
               <path className="fill-current" d="M1.574,5.286c0.488,0.262,7.248,3.894,7.5,4.029C9.326,9.45,9.652,9.514,9.98,9.514
     c0.328,0,0.654-0.064,0.906-0.199s7.012-3.767,7.5-4.029C18.875,5.023,19.337,4,18.44,4H1.521C0.624,4,1.086,5.023,1.574,5.286z
@@ -85,11 +85,11 @@ export default function Intro({ posts }) {
     C0.996,7.284,1,7.523,1,7.707S1,15,1,15c0,0.42,0.566,1,1,1h16c0.434,0,1-0.58,1-1c0,0,0-7.108,0-7.292S19.004,7.285,18.613,7.489z"/>
             </svg>
           </a>
-          <a className="font-bold py-2 px-4 rounded inline-flex items-center mx-2" href="https://cv.omarflorez.me">
+          <a className="font-bold py-2 px-4 rounded inline-flex items-center mx-2" href="https://cv.omarflorez.me" title="CV 360°">
             <svg className="w-5 h-5 lg:w-8 lg:h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 20" enableBackground="new 0 0 20 20">
-              <path className="fill-current" d="M14,5h-4v2h4V5z M14,8h-4v1h4V8z M9,5H6v4h3V5z M9,11h5v-1H9V11z M12,13h2v-1h-2V13z M14,14H6v1h8V14z
-    M11,12H6v1h5V12z M8,10H6v1h2V10z M17,1H3C2.447,1,2,1.447,2,2v16c0,0.552,0.447,1,1,1h14c0.553,0,1-0.448,1-1V2
-    C18,1.448,17.553,1,17,1z M16,17H4V3h12V17z"/>
+            <path className="fill-current" d="M10,0.4c-5.302,0-9.6,4.298-9.6,9.6s4.298,9.6,9.6,9.6c5.301,0,9.6-4.298,9.6-9.601
+  C19.6,4.698,15.301,0.4,10,0.4z M10,17.599c-4.197,0-7.6-3.402-7.6-7.6c0-4.197,3.402-7.6,7.6-7.6l0,0V10l6.792-3.396
+  C17.305,7.627,17.6,8.777,17.6,10C17.6,14.197,14.197,17.599,10,17.599z"/>
             </svg>
           </a>
         </div>
