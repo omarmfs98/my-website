@@ -19,15 +19,16 @@ export default async (req, res) => {
         methods: ['POST'],
         origin: '*',
         optionsSuccessStatus: 200
-    });
-    await sendinblue(sendSmtpEmail).then(function(data) {
-        res.status(200).json({
-            message: 'Email sended successfully',
-            data
+    }).then(async () => {
+        await sendinblue(sendSmtpEmail).then(function(data) {
+            res.status(200).json({
+                message: 'Email sended successfully',
+                data
+            });
+        }, function(error) {
+            res.status(error.status).json({
+                error
+            })
         });
-    }, function(error) {
-        res.status(error.status).json({
-            error
-        })
     });
 }
