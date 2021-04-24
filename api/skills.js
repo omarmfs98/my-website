@@ -32,6 +32,6 @@ export default async (req, res) => {
         { id: 7, name: "Django", styles: {"width": 120, "height": 40}, type_skill: searchType(3), percent: 46, icon: { url: `${urlAssets}/assets/skills/django.svg`} },
         { id: 8, name: "Amazon Web Services", styles: {"width": 100, "height": 55}, type_skill: searchType(4), percent: 68, icon: { url: `${urlAssets}/assets/skills/aws.svg`} },
         { id: 9, name: "Strapi", styles: {"width": 100, "height": 80}, type_skill: searchType(6), percent: 70, icon: { url: `${urlAssets}/assets/skills/strapi.svg`} },
-        { id: 10, name: "Dialogflow", styles: {"width": 80, "height": 80 }, type_skill: searchType(7), percent: 55, icon: { url: `${urlAssets}/assets/skills/dialoglow.svg`} }
+        { id: 10, name: "Dialogflow", styles: {"width": 80, "height": 80 }, type_skill: searchType(7), percent: 55, icon: { url: `${urlAssets}/assets/skills/dialogflow.svg`} }
     ])
 }
