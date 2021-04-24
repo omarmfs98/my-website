@@ -12,6 +12,7 @@
     "gray-matter": "4.0.2",
     "next": "latest",
     "next-redux-wrapper": "^6.0.2",
+    "nextjs-cors": "^1.0.5",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",

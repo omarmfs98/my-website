@@ -1,3 +1,5 @@
+import NextCors from 'nextjs-cors';
+
 const typeSkills = [
     { id: 1, name: "Frontend" },
     { id: 2, name: "Backend" },
@@ -14,6 +16,12 @@ const searchType = (id) => {
 
 export default (req, res) => { 
     const urlAssets = `https://${req.headers.host}`;
+    await NextCors(req, res, {
+        // Options
+        methods: ['GET'],
+        origin: '*',
+        optionsSuccessStatus: 200
+    });
     res.status(200).json([    
         { id: 1, name: "Vue.js", styles: {"width": 100, "height": 80}, type_skill: searchType(1), percent: 85, icon: { url: `${urlAssets}/assets/skills/vue.svg` } },
         { id: 2, name: "React.js", styles: {"width": 100, "height": 80}, type_skill: searchType(1), percent: 65, icon: { url: `${urlAssets}/assets/skills/react.svg` } },
