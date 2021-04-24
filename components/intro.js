@@ -38,7 +38,7 @@ export default function Intro({ posts }) {
 
     handleSending()
 
-    fetch(`${API_URL}/contacts`, data)
+    fetch(`${API_URL}/contact`, data)
       .then(response => response.json())
       .then(() => {
         handleSended()
