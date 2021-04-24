@@ -1,4 +1,4 @@
-import sendinblue from "../../lib/sendinblue";
+import sendinblue from "../lib/sendinblue";
 
 export default async (req, res) => {    
     const { email, name, message } = req.body;
