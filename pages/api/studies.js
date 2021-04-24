@@ -12,7 +12,7 @@ const searchType = (arr, id) => {
     return arr.find(type => type.id === id);
 }
 
-export default (req, res) => {
+export default async (req, res) => {
     await NextCors(req, res, {
         // Options
         methods: ['GET'],

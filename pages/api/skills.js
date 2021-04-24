@@ -14,7 +14,7 @@ const searchType = (id) => {
     return typeSkills.find(type => type.id === id);
 }
 
-export default (req, res) => { 
+export default async (req, res) => { 
     const urlAssets = `https://${req.headers.host}`;
     await NextCors(req, res, {
         // Options
