@@ -77,7 +77,7 @@ export default function Intro({ posts }) {
     c1.4,0,2,1.2,2,2.8V19h4v-7.4C19,7.9,17.1,6.2,14.6,6.2z"/>
             </svg>
           </a>
-          <a className="font-bold py-2 px-4 rounded inline-flex items-center mx-2" href="mailto:hello@omarflorez.me" target="_blank" title="E-mail">
+          <a className="font-bold py-2 px-4 rounded inline-flex items-center mx-2" href="mailto:omarmfs10@gmail.com" target="_blank" title="E-mail">
             <svg className="w-5 h-5 lg:w-8 lg:h-8" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 20" enableBackground="new 0 0 20 20">
               <path className="fill-current" d="M1.574,5.286c0.488,0.262,7.248,3.894,7.5,4.029C9.326,9.45,9.652,9.514,9.98,9.514
     c0.328,0,0.654-0.064,0.906-0.199s7.012-3.767,7.5-4.029C18.875,5.023,19.337,4,18.44,4H1.521C0.624,4,1.086,5.023,1.574,5.286z
