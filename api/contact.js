@@ -1,4 +1,3 @@
-import NextCors from 'nextjs-cors';
 import sendinblue from "../lib/sendinblue";
 
 export default async (req, res) => {    
@@ -14,21 +13,14 @@ export default async (req, res) => {
         },
         message: message,
     };
-    await NextCors(req, res, {
-        // Options
-        methods: ['POST'],
-        origin: '*',
-        optionsSuccessStatus: 200
-    }).then(async () => {
-        await sendinblue(sendSmtpEmail).then(function(data) {
-            res.status(200).json({
-                message: 'Email sended successfully',
-                data
-            });
-        }, function(error) {
-            res.status(error.status).json({
-                error
-            })
+    await sendinblue(sendSmtpEmail).then(function(data) {
+        res.status(200).json({
+            message: 'Email sended successfully',
+            data
         });
+    }, function(error) {
+        res.status(error.status).json({
+            error
+        })
     });
 }
