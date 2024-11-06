@@ -103,7 +103,7 @@ export default function Intro({ posts }) {
               </div>
               <h2 className="font-bold text-2xl mb-4">Acerca de mi</h2>
               <div className="text-lg text-gray-600">
-                <p className="text-sm lg:text-lg">Hola, me llamo Omar, tengo {age()} años, soy Desarrollador Frontend 👨‍💻, actualmente estoy estudiando Ingeniería de Sistemas en la Universidad de Córdoba, nací en Bogotá, Colombia pero me crié en Planeta Rica, Córdoba.</p>
+                <p className="text-sm lg:text-lg">Hola, me llamo Omar, tengo {age()} años y soy un apasionado Desarrollador Frontend 👨‍💻. Estudié Ingeniería de Sistemas en la Universidad de Córdoba, soy de la bella y cordial Planeta Rica, Córdoba. Me encanta crear interfaces intuitivas y funcionales, siempre estoy en busca de nuevas tecnologías y desafíos para mejorar la experiencia de usuario.</p>
               </div>
             </div>
           </div>
