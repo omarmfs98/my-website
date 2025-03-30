@@ -47,7 +47,7 @@ let ContactForm = props => {
                 :
                 <div>
                     <div className="flex flex-wrap -mx-3 mb-3 helper-contact items-center text-center text-xl font-bold">
-                        Gracias por querer contactarme, pronto te respondere 😎
+                        ¡Gracias por querer contactarme, pronto te responderé 😎!
                     </div>
                 </div>
             }
