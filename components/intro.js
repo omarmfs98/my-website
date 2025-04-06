@@ -104,9 +104,10 @@ export default function Intro({ posts }) {
               <div className="skillHeader mb-4 lg:mb-10">
                 <div className="text-4xl">👋</div>
               </div>
-              <h2 className="font-bold text-2xl mb-4">Acerca de mi</h2>
+              <h2 className="font-bold text-2xl mb-4">About Me</h2>
               <div className="text-lg text-gray-600">
-                <p className="text-sm lg:text-lg">Hola, me llamo Omar, tengo {age()} años y soy un apasionado Desarrollador Frontend 👨‍💻. Estudié Ingeniería de Sistemas en la Universidad de Córdoba, soy de la bella y cordial Planeta Rica, Córdoba. Me encanta crear interfaces intuitivas y funcionales, siempre estoy en busca de nuevas tecnologías y desafíos para mejorar la experiencia de usuario.</p>
+                <p className="text-sm lg:text-lg">Hi, my name is Omar. I’m {age()} years old and a passionate Frontend Developer 👨‍💻. I studied Systems Engineering at the Universidad de Córdoba, and I’m proudly from the beautiful and welcoming town of Planeta Rica, Córdoba.
+                I love building intuitive and functional user interfaces, and I’m always exploring new technologies and challenges to improve the user experience.</p>
               </div>
             </div>
           </div>
@@ -119,7 +120,7 @@ export default function Intro({ posts }) {
               </div>
               <h2 className="font-bold text-2xl mb-4">Skills</h2>
               <div className="text-lg text-gray-600">
-                <p className="text-sm lg:text-lg">He trabajado con diversas tecnologías para ambitos como Backend, Frontend, Cloud Computing, entre otros:</p>
+                <p className="text-sm lg:text-lg">I’ve worked with a wide range of technologies across areas such as Backend, Frontend, Cloud Computing, and more.</p>
                 <div className="mt-6 flex flex-wrap items-center justify-around">
                   {SKILLS.map((skill, i) =>
                     <div className={`w-${skill.w} h-8 mx-3 my-2 skill-icon bg-center bg-contain`} key={i}

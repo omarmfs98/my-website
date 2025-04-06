@@ -15,13 +15,13 @@ let ContactForm = props => {
         <form onSubmit={handleSubmit} className="w-full max-w-lg">
             {!sended ?
                 <div>
-                    <h2 className="font-bold text-2xl mb-4">Contacto</h2>
+                    <h2 className="font-bold text-2xl mb-4">Contact</h2>
                     <div className="text-lg text-gray-600">
-                        <p className="mb-3 text-sm lg:text-lg">Si deseas contactarme, por favor llena el formulario:</p>
+                        <p className="mb-3 text-sm lg:text-lg">If you'd like to get in touch, please fill out the form below:</p>
                         <div className="flex flex-wrap -mx-3 mb-3">
                             <div className="w-full px-3">
                                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
-                                    Nombre
+                                    Name
                                 </label>
                                 <Field name="name" disabled={sending} component="input" required className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="Omar" />
                             </div>
@@ -29,16 +29,16 @@ let ContactForm = props => {
                         <div className="flex flex-wrap -mx-3 mb-3">
                             <div className="w-full px-3">
                                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
-                                    Correo
+                                    Email
                                 </label>
                                 <Field name="email" disabled={sending} component="input" required className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="email" placeholder="omar@example.com" />
-                                <p className="text-gray-600 text-xs italic">Respondere lo mas pronto posible ⚡</p>
+                                <p className="text-gray-600 text-xs italic">I'll reply as soon as possible ⚡</p>
                             </div>
                         </div>
                         <div className="flex flex-wrap -mx-3">
                             <div className="w-full px-3">
                                 <button disabled={sending} className="w-full shadow bg-green-500 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
-                                    {sending ? 'Enviando...' : 'Enviar'}
+                                    {sending ? 'Sending...' : 'Send'}
                                 </button>
                             </div>
                         </div>
@@ -47,7 +47,7 @@ let ContactForm = props => {
                 :
                 <div>
                     <div className="flex flex-wrap -mx-3 mb-3 helper-contact items-center text-center text-xl font-bold">
-                        ¡Gracias por querer contactarme, pronto te responderé 😎!
+                        Thank you for reaching out! I'll get back to you soon 😎!
                     </div>
                 </div>
             }
