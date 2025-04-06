@@ -34,8 +34,8 @@ As ambient light increases, LEDs light up one by one until the bar is fully lit 
 | LED Blue 2     | GPIO 19   |
 | LED Blue 3     | GPIO 21   |
 | LED Blue 4     | GPIO 22   |
+| LED Blue 5     | GPIO 25   |
 | LED Red        | GPIO 23   |
-| LED Blue Final | GPIO 25   |
 
 > ⚠️ The other leg of the photoresistor should be connected to 3.3 V. You may need a resistor to form a voltage divider for more accurate readings.
 
