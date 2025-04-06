@@ -42,3 +42,32 @@
 .helper-contact {
     min-height: 360px;
 }
+
+.prose table {
+    @apply table-auto w-full text-left border-collapse border border-gray-300;
+}
+
+.prose th {
+    @apply border border-gray-600 px-4 py-2 text-gray-100 bg-gray-800;
+}
+
+.prose td {
+    @apply border border-gray-600 text-gray-900 px-4 py-2 bg-yellow-200;
+}
+
+.prose thead {
+    @apply bg-gray-900;
+}
+
+.markdown pre {
+    background-color: theme('colors.code.bg');
+    color: theme('colors.code.text');
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow: auto;
+}
+  
+.markdown code {
+    background-color: theme('colors.code.bg');
+    color: theme('colors.code.text');
+}

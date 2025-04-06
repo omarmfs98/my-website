@@ -7,12 +7,15 @@ import PostHeader from '../../components/post-header'
 import Layout from '../../components/layout'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
+import MoreStories from '../../components/more-stories'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, allPosts, preview }) {
   const router = useRouter()
+
+  const morePosts = allPosts.slice(1)
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
@@ -37,7 +40,9 @@ export default function Post({ post, morePosts, preview }) {
                   date={post.date}
                   author={post.author}
                 />
-                <PostBody content={post.content} />
+                <PostBody code={post.code} />
+
+                {morePosts.length > 0 && <MoreStories posts={morePosts} />}
               </article>
             </>
           )}
@@ -56,14 +61,25 @@ export async function getStaticProps({ params }) {
     'ogImage',
     'coverImage',
   ])
-  const content = await markdownToHtml(post.content || '')
+
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'excerpt',
+  ])
+
+  const { code } = await markdownToHtml(post.content)
 
   return {
     props: {
       post: {
         ...post,
-        content,
+        code,
       },
+      allPosts,
     },
   }
 }

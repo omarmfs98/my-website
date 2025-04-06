@@ -1,12 +1,12 @@
-import markdownStyles from './markdown-styles.module.css'
+import { getMDXComponent } from 'mdx-bundler/client'
+import { useMemo } from 'react'
 
-export default function PostBody({ content }) {
+export default function PostBody({ code }) {
+  const Component = useMemo(() => getMDXComponent(code), [code])
+
   return (
-    <div className="max-w-2xl mx-auto">
-      <div
-        className={markdownStyles['markdown']}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+    <div className="max-w-2xl mx-auto prose prose-custom">
+      <Component />
     </div>
   )
 }

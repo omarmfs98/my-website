@@ -1,26 +1,78 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply text-lg leading-relaxed prose prose-lg dark:prose-invert;
+  background-color: #f5e9c9; /* Fondo igual al color start */
+  padding: 2rem;
+  border-radius: 0.75rem;
+  color: #1a1a1a; /* Texto principal */
 }
 
-.markdown p,
-.markdown ul,
-.markdown ol,
-.markdown blockquote {
-  @apply my-6;
+/* Títulos */
+.markdown h1, .markdown h2, .markdown h3 {
+  color: #2a2a2a;
+  font-weight: 700;
 }
 
-.markdown h1 {
-  @apply text-4xl mt-16 mb-4 leading-snug font-bold;
+/* Links */
+.markdown a {
+  color: #005a9c;
+  text-decoration: underline;
 }
 
-.markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug font-bold;
-}
-
-.markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug font-bold;
-}
-
+/* Bloques de código */
 .markdown pre {
-  overflow: auto;
+  background-color: #2c3043;
+  color: #c0caf5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+/* Código inline */
+.markdown code {
+  background-color: rgba(44, 48, 67, 0.1);
+  color: #2c3043;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 0.95em;
+}
+
+/* Tablas */
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.markdown th, .markdown td {
+  border: 1px solid #d1c7a3;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.markdown thead {
+  background-color: #ede4d1;
+}
+
+/* Citas */
+.markdown blockquote {
+  border-left: 4px solid #d1c7a3;
+  padding-left: 1rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* Listas */
+.markdown ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.markdown ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+
+/* Checkbox / Task lists */
+.markdown input[type="checkbox"] {
+  margin-right: 0.5rem;
 }

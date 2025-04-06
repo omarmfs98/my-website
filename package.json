@@ -10,11 +10,15 @@
     "node": "18.x"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.21",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "gray-matter": "4.0.2",
+    "mdx-bundler": "^10.1.1",
     "next": "12.2.0",
     "next-redux-wrapper": "^6.0.2",
+    "postcss": "^8.5.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-redux": "^7.2.0",
@@ -22,19 +26,22 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-form": "^8.3.6",
     "redux-thunk": "^2.3.0",
-    "rehype-highlight": "^4.0.0",
-    "rehype-stringify": "^8.0.0",
+    "rehype-highlight": "^7.0.2",
+    "rehype-stringify": "^10.0.1",
     "remark": "11.0.2",
+    "remark-gfm": "^4.0.1",
     "remark-highlight.js": "^6.0.0",
     "remark-html": "10.0.0",
     "remark-midas": "^6.0.0",
     "remark-parse": "^8.0.3",
     "remark-preset-lint-markdown-style-guide": "^3.0.1",
-    "remark-rehype": "^7.0.0",
+    "remark-rehype": "^11.1.2",
     "sib-api-v3-sdk": "^8.5.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^1.0.0",
+    "esbuild": "^0.25.2",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.0"
+    "tailwindcss": "^3.4.1"
   }
 }
