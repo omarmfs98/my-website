@@ -36,7 +36,6 @@ export default function Meta() {
         name="description"
         content={`Sitio web de Omar Flórez`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       <script dangerouslySetInnerHTML={{ __html: `
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
