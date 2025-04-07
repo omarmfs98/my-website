@@ -86,7 +86,7 @@ Full code is available in the `main.cpp` file of the repository (or at the botto
 
 ## 📘 Resources
 
-- [ESP32 analog input reference](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html)  
+- [ESP32 analog input reference](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/adc_oneshot.html)  
 - [Photoresistor basics](https://learn.adafruit.com/photocells/overview)  
 - [LED tutorials from Arduino](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink)
 - [Repository link](https://github.com/omarmfs98/led-photoresistor)
